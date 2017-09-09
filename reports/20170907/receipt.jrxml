@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="receipt" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0e9267e0-72f4-49e7-9794-3578bc5b6800">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="header" hAlign="Center" vAlign="Middle" fontName="TH SarabunPSK" fontSize="26" isBold="true"/>
+	<style name="label" fontName="TH SarabunPSK" fontSize="14"/>
+	<style name="value" fontName="TH SarabunPSK" fontSize="14"/>
+	<style name="small" fontName="TH SarabunPSK" fontSize="12"/>
+	<parameter name="receiptTitle" class="java.lang.String"/>
+	<parameter name="receiptNo" class="java.lang.String"/>
+	<parameter name="invoiceNo" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="juristic.name.th" class="java.lang.String"/>
+	<parameter name="juristic.name.en" class="java.lang.String"/>
+	<parameter name="juristic.address.th" class="java.lang.String"/>
+	<parameter name="juristic.address.en" class="java.lang.String"/>
+	<parameter name="juristic.tel" class="java.lang.String"/>
+	<parameter name="juristic.fax" class="java.lang.String"/>
+	<parameter name="juristic.email" class="java.lang.String"/>
+	<parameter name="juristic.taxid" class="java.lang.String"/>
+	<parameter name="payer" class="java.lang.String"/>
+	<parameter name="payerAddress" class="java.lang.String"/>
+	<parameter name="no1" class="java.lang.String"/>
+	<parameter name="no2" class="java.lang.String"/>
+	<parameter name="no3" class="java.lang.String"/>
+	<parameter name="no4" class="java.lang.String"/>
+	<parameter name="no5" class="java.lang.String"/>
+	<parameter name="no6" class="java.lang.String"/>
+	<parameter name="no7" class="java.lang.String"/>
+	<parameter name="no8" class="java.lang.String"/>
+	<parameter name="detail1" class="java.lang.String"/>
+	<parameter name="detail2" class="java.lang.String"/>
+	<parameter name="detail3" class="java.lang.String"/>
+	<parameter name="detail4" class="java.lang.String"/>
+	<parameter name="detail5" class="java.lang.String"/>
+	<parameter name="detail6" class="java.lang.String"/>
+	<parameter name="detail7" class="java.lang.String"/>
+	<parameter name="detail8" class="java.lang.String"/>
+	<parameter name="qty1" class="java.lang.String"/>
+	<parameter name="qty2" class="java.lang.String"/>
+	<parameter name="qty3" class="java.lang.String"/>
+	<parameter name="qty4" class="java.lang.String"/>
+	<parameter name="qty5" class="java.lang.String"/>
+	<parameter name="qty6" class="java.lang.String"/>
+	<parameter name="qty7" class="java.lang.String"/>
+	<parameter name="qty8" class="java.lang.String"/>
+	<parameter name="unitPrice1" class="java.lang.String"/>
+	<parameter name="unitPrice2" class="java.lang.String"/>
+	<parameter name="unitPrice3" class="java.lang.String"/>
+	<parameter name="unitPrice4" class="java.lang.String"/>
+	<parameter name="unitPrice5" class="java.lang.String"/>
+	<parameter name="unitPrice6" class="java.lang.String"/>
+	<parameter name="unitPrice7" class="java.lang.String"/>
+	<parameter name="unitPrice8" class="java.lang.String"/>
+	<parameter name="amount1" class="java.lang.String"/>
+	<parameter name="amount2" class="java.lang.String"/>
+	<parameter name="amount3" class="java.lang.String"/>
+	<parameter name="amount4" class="java.lang.String"/>
+	<parameter name="amount5" class="java.lang.String"/>
+	<parameter name="amount6" class="java.lang.String"/>
+	<parameter name="amount7" class="java.lang.String"/>
+	<parameter name="amount8" class="java.lang.String"/>
+	<parameter name="totalAmountText" class="java.lang.String"/>
+	<parameter name="totalAmount" class="java.lang.String"/>
+	<parameter name="payByCash" class="java.lang.String"/>
+	<parameter name="payByCheque" class="java.lang.String"/>
+	<parameter name="chequeBankName" class="java.lang.String"/>
+	<parameter name="chequeNo" class="java.lang.String"/>
+	<parameter name="chequeDate" class="java.lang.String"/>
+	<parameter name="transfer" class="java.lang.String"/>
+	<parameter name="transferBankName" class="java.lang.String"/>
+	<parameter name="transferDate" class="java.lang.String"/>
+	<parameter name="signatureLine1" class="java.lang.String"/>
+	<parameter name="signature1" class="java.lang.String"/>
+	<parameter name="signatureLine2" class="java.lang.String"/>
+	<parameter name="signature2" class="java.lang.String"/>
+	<parameter name="receipt.real.tail.th" class="java.lang.String"/>
+	<parameter name="receipt.real.tail.en" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="224">
+			<rectangle>
+				<reportElement x="0" y="0" width="330" height="130" uuid="cb9212ab-2ad3-4018-997f-f23cd969b824"/>
+			</rectangle>
+			<textField>
+				<reportElement style="header" x="341" y="13" width="208" height="32" uuid="56e21d10-fa4f-46d7-ae3f-ebe3890c6195"/>
+				<textFieldExpression><![CDATA[$P{receiptTitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="427" y="65" width="128" height="20" uuid="78ff46ad-86ba-4be7-97f3-ea0ab471461f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{receiptNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="427" y="85" width="128" height="20" uuid="72de0489-b19b-42ec-b20b-367369240506"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{invoiceNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="label" x="362" y="85" width="65" height="20" uuid="1a0f6e8d-6b12-46b9-9111-cf0fa15e5d5d"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[เลขที่ใบแจ้งหนี้: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="362" y="65" width="65" height="20" uuid="2015eb07-dc4a-4d18-9c3d-8ca9a2922c70"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[เลขที่: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="label" x="5" y="5" width="320" height="20" uuid="cf19f461-8d6c-4d9d-bad4-1aac2195d824"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{juristic.name.th}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="5" y="25" width="320" height="20" uuid="be8a04ad-1948-4270-836c-935dfb6a17fe"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{juristic.name.en}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="small" x="5" y="45" width="320" height="20" uuid="07ca5c31-e32c-4a50-a8b4-5ecc11a398a9"/>
+				<textFieldExpression><![CDATA[$P{juristic.address.th}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="small" x="5" y="65" width="320" height="20" uuid="ad6b0c7e-772b-4e8b-8dfa-a1a3d3b2997e"/>
+				<textFieldExpression><![CDATA[$P{juristic.address.en}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="small" x="26" y="85" width="60" height="20" uuid="7c3394f2-eed0-4ac6-9681-bda8183c2910"/>
+				<textFieldExpression><![CDATA[$P{juristic.tel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="small" x="108" y="85" width="60" height="20" uuid="07ff9224-5bde-43a2-8fcd-b2041b96b0e3"/>
+				<textFieldExpression><![CDATA[$P{juristic.fax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="small" x="230" y="85" width="95" height="20" uuid="ca0f97ee-f066-4d33-941c-86605aa9dc47"/>
+				<textFieldExpression><![CDATA[$P{juristic.email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="small" x="5" y="85" width="20" height="20" uuid="ef22408a-9aee-401b-9329-3afc82fcb482"/>
+				<text><![CDATA[Tel.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="small" x="87" y="85" width="20" height="20" uuid="d47d6f3e-13e7-47d7-a5c0-01d1f8a37ce4"/>
+				<text><![CDATA[Fax.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="small" x="173" y="85" width="56" height="20" uuid="137dbb48-ce39-4da2-802c-31b553d83ce0"/>
+				<text><![CDATA[Email Address:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="small" x="5" y="105" width="81" height="20" uuid="36ea4e8e-790e-4f57-92af-4275b0dff23c"/>
+				<text><![CDATA[เลขประจำตัวผู้เสียภาษี:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="small" x="86" y="105" width="239" height="20" uuid="6f862484-9095-465f-b2ff-75d0ce231f9f"/>
+				<textFieldExpression><![CDATA[$P{juristic.taxid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="label" x="5" y="138" width="55" height="20" uuid="98f0ab81-ec67-445b-ac86-2901758700c0"/>
+				<text><![CDATA[ได้รับเงินจาก]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="value" x="60" y="138" width="265" height="20" uuid="c7524e6f-47da-4501-ab02-762d74e40cec"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{payer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="label" x="357" y="198" width="65" height="20" uuid="cd16b8e0-7fc8-401a-ae57-d9b5f2f12b98"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[วันที่:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="value" x="422" y="198" width="127" height="20" uuid="51d12b90-4dee-4af1-b12b-5c410dbb7cbb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="158" width="320" height="60" uuid="c358be93-83ac-4c4b-9894-efa167840fe9"/>
+				<textFieldExpression><![CDATA[$P{payerAddress}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="248" splitType="Stretch">
+			<rectangle>
+				<reportElement x="5" y="35" width="550" height="175" uuid="04fbaf97-a964-457c-881f-eb338b1bab36"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="5" y="5" width="550" height="30" uuid="9eba8129-c908-4bc5-a1b0-ea5c86024ff9"/>
+			</rectangle>
+			<staticText>
+				<reportElement style="label" x="402" y="10" width="60" height="20" uuid="0a2440a0-081d-4e45-a7c3-d1812c313735"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ราคา/หน่วย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="10" y="10" width="25" height="20" uuid="0613b14c-0507-4071-882b-4b8948bed32d"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ลำดับ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="45" y="10" width="310" height="20" uuid="00108dd3-53b3-466c-85c0-36525bb1f7e4"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[รายการ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="364" y="10" width="32" height="20" uuid="30e7f129-0753-4bd7-a4a2-1492d62b8390"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[จำนวน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="469" y="10" width="80" height="20" uuid="57af20ce-f6d7-4a82-ac65-fefcbc6eee8b"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[จำนวนเงิน]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="label" x="10" y="41" width="25" height="20" uuid="af327a9a-f6c7-4c50-a013-955f9874cee3"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{no1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="10" y="61" width="25" height="20" uuid="d24cec91-c2a3-4b7a-98ce-5f63f7d9cd9c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{no2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="10" y="81" width="25" height="20" uuid="655ca2ec-acae-4fa9-9d18-97ddaa54e28c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{no3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="10" y="101" width="25" height="20" uuid="44282410-a837-4b4a-b9cc-8376d54ac3d9"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{no4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="10" y="121" width="25" height="20" uuid="75955c79-ea62-4f4c-b431-ae84a3c3b90a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{no5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="10" y="141" width="25" height="20" uuid="bfdb3907-63f0-4337-88e2-10140979174a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{no6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="10" y="161" width="25" height="20" uuid="904acbc1-aec4-434f-9286-4218e347743c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{no7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="10" y="181" width="25" height="20" uuid="22f61834-9681-470f-8d59-20ec341738f3"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{no8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="45" y="41" width="310" height="20" uuid="b9276922-56b5-459f-87d5-ac91f58e2865"/>
+				<textFieldExpression><![CDATA[$P{detail1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="45" y="61" width="310" height="20" uuid="78180cbd-f2e5-4f7a-82d5-de5543e475e8"/>
+				<textFieldExpression><![CDATA[$P{detail2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="45" y="81" width="310" height="20" uuid="cc9505f6-4ceb-4758-a791-eb0a8233937f"/>
+				<textFieldExpression><![CDATA[$P{detail3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="45" y="101" width="310" height="20" uuid="8a969096-b8d3-4d49-8d99-8bf8238fecca"/>
+				<textFieldExpression><![CDATA[$P{detail4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="45" y="121" width="310" height="20" uuid="e7621ce9-4751-4008-923c-aff0fc1f70a8"/>
+				<textFieldExpression><![CDATA[$P{detail5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="45" y="141" width="310" height="20" uuid="9fbfef60-2339-49a9-b454-84444e4ee22c"/>
+				<textFieldExpression><![CDATA[$P{detail6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="45" y="161" width="310" height="20" uuid="2a83604e-f5a0-456b-b007-818e0af10459"/>
+				<textFieldExpression><![CDATA[$P{detail7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="45" y="181" width="310" height="20" uuid="8835f562-d835-44b7-99e7-35a452142f9f"/>
+				<textFieldExpression><![CDATA[$P{detail8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="364" y="41" width="32" height="20" uuid="d977b441-e6f6-4677-89b6-1a7ac84bc10e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{qty1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="364" y="61" width="32" height="20" uuid="7adbbaa3-73f2-4895-a0f8-6292ba85ad23"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{qty2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="364" y="81" width="32" height="20" uuid="8f326434-0d0f-4075-80a1-00a21c0e405a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{qty3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="364" y="101" width="32" height="20" uuid="9815b7a4-576b-44da-86ff-1961ee58d882"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{qty4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="364" y="121" width="32" height="20" uuid="6ff0c5da-d053-437e-9daa-5c3d49c5d1ec"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{qty5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="364" y="141" width="32" height="20" uuid="9178a7b3-3189-4d8b-afbe-0ac7248bf945"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{qty6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="364" y="161" width="32" height="20" uuid="e24367d3-92aa-4c11-98aa-aa847ed4d211"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{qty7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="364" y="181" width="32" height="20" uuid="3d9f27f2-2608-4bbc-abc8-76cd56078b6e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{qty8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="402" y="41" width="60" height="20" uuid="4244bd89-a317-4668-9713-b6f70651e42b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{unitPrice1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="402" y="61" width="60" height="20" uuid="5dbbbf28-7c6e-46ec-91cf-6facf90b2747"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{unitPrice2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="402" y="81" width="60" height="20" uuid="63186167-7a58-4611-b56e-35c4a2fc0d70"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{unitPrice3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="402" y="101" width="60" height="20" uuid="9fcb0464-7468-4e76-8788-ac8f2d7934bc"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{unitPrice4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="402" y="121" width="60" height="20" uuid="2490a2b6-ee12-4084-9c82-2fbf37b8c984"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{unitPrice5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="402" y="141" width="60" height="20" uuid="3ddc6963-3cda-44f2-bdf8-9f9a8a3781c9"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{unitPrice6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="402" y="161" width="60" height="20" uuid="df630934-6825-4f44-8d46-e3a027cca26d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{unitPrice7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="402" y="181" width="60" height="20" uuid="6d1b6204-2549-4d01-8a43-09b3a4cd4b13"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{unitPrice8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="469" y="41" width="80" height="20" uuid="0dd94971-72de-4bc8-8db6-ec344833f4f0"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{amount1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="469" y="61" width="80" height="20" uuid="22c457c1-5c22-4f4a-89a6-3c2b6de8df87"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{amount2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="469" y="81" width="80" height="20" uuid="8d975d14-2203-4527-8aae-b6f096d46299"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{amount3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="469" y="101" width="80" height="20" uuid="30903ae7-0bfc-41a6-a24e-508d1baac5de"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{amount4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="469" y="121" width="80" height="20" uuid="51183166-0958-402f-b205-f7e0aa38853c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{amount5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="469" y="141" width="80" height="20" uuid="d8518350-5ca7-4618-ae0b-5cc53bdb2276"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{amount6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="469" y="161" width="80" height="20" uuid="cbade19b-0768-4278-a2b7-44e5898fbe54"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{amount7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="469" y="181" width="80" height="20" uuid="c4d2c546-22b7-4e77-aa62-c3f3f52ee55b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{amount8}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="5" y="210" width="550" height="30" uuid="b43bdf2f-a7a2-44ea-9878-e974d009cb6d"/>
+			</rectangle>
+			<textField>
+				<reportElement style="value" x="10" y="215" width="386" height="20" uuid="7c18f3aa-b2a7-42bb-b90a-797e4033470d"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalAmountText}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="label" x="402" y="215" width="60" height="20" uuid="de0be619-56d4-4ccc-aeb8-5a7065a3b058"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[รวม]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="value" x="469" y="215" width="80" height="20" uuid="29c75e9a-9c1b-4506-b0ec-dbb1e027af02"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalAmount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="39" y="5" width="1" height="205" uuid="aa71f1e1-8870-4bf2-af2e-a00aea079e0a"/>
+			</line>
+			<line>
+				<reportElement x="359" y="5" width="1" height="205" uuid="7244ec07-6c77-4d99-927d-299306bc1eab"/>
+			</line>
+			<line>
+				<reportElement x="398" y="5" width="1" height="205" uuid="faef132f-a162-4ab0-89dc-5b0263fbcdca"/>
+			</line>
+			<line>
+				<reportElement x="465" y="5" width="1" height="235" uuid="f0fee96e-a9ac-44bc-982a-fcaad46617ce"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="251">
+			<staticText>
+				<reportElement style="label" x="5" y="16" width="67" height="20" uuid="e195baf0-bab6-491a-8694-848f72188b4c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[วิธีการชำระเงิน:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="107" y="16" width="25" height="20" uuid="b4f5e0e0-1392-410f-ab0e-1ce56cd56373"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[เงินสด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="172" y="16" width="44" height="20" uuid="c8fcbd81-b85d-4c95-bb66-bdd76d3f38d0"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[เช็คธนาคาร]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="335" y="16" width="24" height="20" uuid="f25a488f-1240-422f-bc36-b1e36fcac78c"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[เลขที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="428" y="16" width="35" height="20" uuid="28e44328-7dfc-4fe9-80dc-bb68d7a03097"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[ลงวันที่]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="label" x="81" y="16" width="25" height="20" uuid="1eecfa94-cdbc-489b-95db-b6dc7a24ffde"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{payByCash}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="146" y="16" width="25" height="20" uuid="e568371a-944a-4c27-a70c-57832efce11b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{payByCheque}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="220" y="16" width="110" height="20" uuid="db0ade7a-431a-4361-b763-9c2f9536289b"/>
+				<textFieldExpression><![CDATA[$P{chequeBankName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="361" y="16" width="61" height="20" uuid="6675c6db-cedc-459c-953d-bd58b006ecbb"/>
+				<textFieldExpression><![CDATA[$P{chequeNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="464" y="16" width="85" height="20" uuid="8b48f775-c401-451c-93dc-62bebb497126"/>
+				<textFieldExpression><![CDATA[$P{chequeDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="label" x="108" y="53" width="62" height="20" uuid="54f227d3-8d47-4b2b-aa29-1faa7c8a0f11"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[โอนเข้าธนาคาร]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="label" x="81" y="53" width="25" height="20" uuid="4e80cac2-50ac-431a-8a04-9a6af49e54ff"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{transfer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="173" y="53" width="110" height="20" uuid="721a700f-def9-414e-9458-71e81dd0ff99"/>
+				<textFieldExpression><![CDATA[$P{transferBankName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="label" x="292" y="53" width="23" height="20" uuid="a4d530f9-0a7a-4cc5-9662-cd56bfb56aff"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[วันที่]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="value" x="319" y="53" width="100" height="20" uuid="6fb8dedb-faed-417c-af50-2d2c8afbcd22"/>
+				<textFieldExpression><![CDATA[$P{transferDate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="220" y="36" width="110" height="1" uuid="89ec1ef1-1a24-4c7f-9f76-8f77f113366d"/>
+			</line>
+			<line>
+				<reportElement x="361" y="36" width="61" height="1" uuid="f36b608d-dce3-49c8-b6c8-2bff8964382d"/>
+			</line>
+			<line>
+				<reportElement x="462" y="36" width="87" height="1" uuid="8e70f7cd-239f-4635-a6ca-2ad573734416"/>
+			</line>
+			<line>
+				<reportElement x="173" y="73" width="110" height="1" uuid="c541640a-b5f3-44e0-9949-706014663940"/>
+			</line>
+			<line>
+				<reportElement x="319" y="73" width="100" height="1" uuid="786c83df-2b33-44f4-b6a8-0ec9521d22e0"/>
+			</line>
+			<textField>
+				<reportElement style="label" x="79" y="122" width="120" height="20" uuid="172ef7f3-a39e-4e38-b562-acac70209995"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{signatureLine1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="79" y="142" width="120" height="20" uuid="2fdd4eae-b548-47c2-af8b-03e11dc1cc68"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{signature1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="355" y="122" width="120" height="20" uuid="408fced8-9278-4bdb-9772-2f48215d61dd"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{signatureLine2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="355" y="142" width="120" height="20" uuid="2f9f83d5-2438-47d6-9244-96829a20ea6e"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{signature2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="10" y="207" width="539" height="20" uuid="5de24ea3-dd5a-4b5e-ba89-7e9d944f7715"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{receipt.real.tail.th}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="label" x="10" y="227" width="539" height="20" uuid="021fcdc8-82ae-4b54-8102-84e3bb74e996"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{receipt.real.tail.en}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

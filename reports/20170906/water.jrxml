@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="water" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0e9267e0-72f4-49e7-9794-3578bc5b6800">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="header" hAlign="Center" vAlign="Middle" fontName="TH SarabunPSK" fontSize="26" isBold="true"/>
+	<style name="label" fontName="TH SarabunPSK" fontSize="14"/>
+	<style name="value" fontName="TH SarabunPSK" fontSize="14"/>
+	<parameter name="invoiceNo" class="java.lang.String"/>
+	<parameter name="owner" class="java.lang.String"/>
+	<parameter name="no" class="java.lang.String"/>
+	<parameter name="roomNo" class="java.lang.String"/>
+	<parameter name="noteDate" class="java.lang.String"/>
+	<parameter name="lastUnit" class="java.lang.String"/>
+	<parameter name="currentUnit" class="java.lang.String"/>
+	<parameter name="usage" class="java.lang.String"/>
+	<parameter name="amount" class="java.lang.String"/>
+	<parameter name="pricePerUnit" class="java.lang.String"/>
+	<parameter name="amountText" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="337" splitType="Stretch">
+			<staticText>
+				<reportElement style="header" mode="Transparent" x="131" y="32" width="300" height="30" uuid="9ca3f4a5-17ee-4018-865e-74f6534cee7d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ใบแจ้งค่าน้ำประปา]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="value" x="426" y="1" width="129" height="20" uuid="42bf129d-1398-4ea0-b495-db4648a9544f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{invoiceNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="label" x="400" y="1" width="25" height="20" uuid="1976a6f4-111f-48ed-bb59-0b25ced923db"/>
+				<text><![CDATA[เลขที่: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="4" y="123" width="96" height="20" uuid="ef22408a-9aee-401b-9329-3afc82fcb482"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[วันที่จดเลขอ่าน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="108" y="123" width="67" height="20" uuid="4ac5b17f-56cc-4b00-816d-a5e2308c1ae3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[เลขอ่านครั้งก่อน]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="value" x="4" y="148" width="96" height="20" uuid="5b9b2061-26e5-43fd-8f70-a3a65d5c53ce"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noteDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="label" x="0" y="93" width="40" height="20" uuid="1a0f6e8d-6b12-46b9-9111-cf0fa15e5d5d"/>
+				<text><![CDATA[บ้านเลขที่: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="175" y="93" width="38" height="20" uuid="98f0ab81-ec67-445b-ac86-2901758700c0"/>
+				<text><![CDATA[ห้องเลขที่: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="value" x="65" y="73" width="411" height="20" uuid="f796cfa3-d509-434e-870c-1ff7183eb552"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{owner}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="label" x="0" y="73" width="65" height="20" uuid="2015eb07-dc4a-4d18-9c3d-8ca9a2922c70"/>
+				<text><![CDATA[ชื่อผู้ใช้น้ำประปา: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="value" x="40" y="93" width="134" height="20" uuid="38b5ca51-0fcb-41b1-b9b4-19000cefb137"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="213" y="93" width="134" height="20" uuid="06b82609-a216-4074-85b8-aa950c705e52"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{roomNo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="118" width="245" height="1" uuid="0eff2707-682b-413c-9359-1bf25649afa8"/>
+			</line>
+			<line>
+				<reportElement x="0" y="173" width="245" height="1" uuid="9f2c93db-fbd3-46b0-b868-65746d228d0c"/>
+			</line>
+			<line>
+				<reportElement x="102" y="118" width="1" height="55" uuid="ae12f82a-c355-4f4b-849c-b9b908bb4d2c"/>
+			</line>
+			<line>
+				<reportElement x="0" y="118" width="1" height="55" uuid="e4dd1045-04ef-43e0-922e-28ea711999c9"/>
+			</line>
+			<line>
+				<reportElement x="177" y="118" width="1" height="55" uuid="a8d9d4bf-149b-4e77-96e4-7604df312cfe"/>
+			</line>
+			<line>
+				<reportElement x="245" y="118" width="1" height="55" uuid="eb4acab8-45f1-4d4c-9949-15e1060e180e"/>
+			</line>
+			<staticText>
+				<reportElement style="label" x="180" y="123" width="62" height="20" uuid="98968bba-5eb4-42b7-8f51-c6804124e384"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[เลขอ่านครั้งหลัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="262" y="118" width="85" height="20" uuid="137dbb48-ce39-4da2-802c-31b553d83ce0"/>
+				<text><![CDATA[จำนวนหน่วย]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="value" x="108" y="148" width="67" height="20" uuid="5895be84-76c5-4ffe-a6d2-33ac1c136779"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lastUnit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="180" y="148" width="62" height="20" uuid="f370155b-83c0-4fe6-adef-39d761ee8bd7"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{currentUnit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="362" y="118" width="100" height="20" uuid="440a7838-008d-4dec-9037-2b55abf029e5"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{usage}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="label" x="0" y="223" width="308" height="67" uuid="51787dec-e92b-4b38-9f70-cdc3cc3c8f8a"/>
+				<text><![CDATA[หรือโอนเงินเข้าบัญชีออมทรัพย์
+ธนาคารกรุงศรีอยุธยา
+เลขที่บัญชี 151-1-62037-7
+ชื้อบัญชี นิติบุคคลอาคารชุด ดีไซน์คอนโดมิเนียม รัชดา]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="262" y="158" width="85" height="20" uuid="2934644f-8b8e-4a70-91ee-506ac8c96ef4"/>
+				<text><![CDATA[จำนวนเงินที่ต้องชำระ]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="value" x="362" y="158" width="100" height="20" uuid="85f96d51-9547-4e2e-8408-db1f280f1cb4"/>
+				<textElement textAlignment="Right">
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="label" x="2" y="1" width="378" height="20" uuid="d39886ad-42e4-4781-9619-a65f02345b4a"/>
+				<text><![CDATA[นิติบุคคลอาคารชุด ดีไซน์ คอนโดมิเนียม รัชดา]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="0" y="203" width="130" height="20" uuid="36ea4e8e-790e-4f57-92af-4275b0dff23c"/>
+				<text><![CDATA[ชำระเงิน ณ สำนักงานนิติบุคคล]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="value" x="362" y="138" width="100" height="20" uuid="0fb22987-ed0d-4752-bded-9639ddb23a2d"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pricePerUnit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="value" x="248" y="178" width="241" height="20" uuid="fb3bb1d0-b99e-40d4-99b1-c5e3721b6b35"/>
+				<textElement textAlignment="Right">
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{amountText}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="label" x="262" y="138" width="85" height="20" uuid="0a2440a0-081d-4e45-a7c3-d1812c313735"/>
+				<text><![CDATA[ราคาหน่วยละ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="469" y="138" width="20" height="20" uuid="5df91ca6-479d-4fde-b936-67e70eb849e8"/>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="469" y="118" width="24" height="20" uuid="7a365031-45da-4fe5-b3c4-14ea86990766"/>
+				<text><![CDATA[หน่วย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="469" y="158" width="20" height="20" uuid="58dcc6e1-994f-442c-93a6-0ffb4a55cef4"/>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="0" y="290" width="130" height="20" uuid="42fa942d-505f-4f20-b6e7-ca1d61052130"/>
+				<text><![CDATA[กรุณาส่งหลักฐานการโอนเงินมาที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="label" x="130" y="290" width="130" height="20" uuid="4f2cc253-0276-403e-b817-178c7daec825"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[dsignjuristic@gmail.com]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
